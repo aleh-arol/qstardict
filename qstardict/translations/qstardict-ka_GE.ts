@@ -466,7 +466,7 @@
         <translation>დამატება</translation>
     </message>
     <message>
-        <location line="+274"/>
+        <location line="+276"/>
         <source>Information about dictionary &quot;%1&quot;</source>
         <translation>ინფორმაცია &quot;%1&quot; ლექსიკონის შესახებ</translation>
     </message>
@@ -675,16 +675,28 @@
     </message>
     <message>
         <location line="+7"/>
+        <location line="+45"/>
         <source>Don&apos;t hide</source>
         <translation>არ დამალო</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-42"/>
+        <location line="+45"/>
         <source> sec</source>
         <translation> წმ</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="-13"/>
+        <source>Timeout before hide after popup shown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Hide the popup this many seconds after it is shown. Select &quot;Don&apos;t hide&quot; to keep it open.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
         <source>Show only if modifier pressed</source>
         <translation>ჩვენება, მხოლოდ, თუ დაჭერილია მოდიფიკატორი</translation>
     </message>
@@ -770,7 +782,7 @@
         <translation>&lt;b&gt;სიტყვების რაოდენობა:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location line="-207"/>
+        <location line="-208"/>
         <source>All translation</source>
         <translation>ყველა თარგმანი</translation>
     </message>
@@ -805,7 +817,7 @@
         <translation>ტრანსკრიფცია</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="-609"/>
+        <location filename="../settingsdialog.ui" line="-651"/>
         <source>Use system tray</source>
         <translation>სისტემის კუთხეში</translation>
     </message>
@@ -814,7 +826,7 @@
     <name>QStarDict::Trainer</name>
     <message>
         <location filename="../trainer.cpp" line="+42"/>
-        <location line="+43"/>
+        <location line="+44"/>
         <source>QStarDict Training</source>
         <translation type="unfinished"></translation>
     </message>
@@ -959,7 +971,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../typeinstage.cpp" line="+92"/>
+        <location filename="../typeinstage.cpp" line="+86"/>
         <source>&lt;p align=&quot;center&quot;&gt;%1&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

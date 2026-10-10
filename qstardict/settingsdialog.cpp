@@ -132,6 +132,7 @@ SettingsDialog::SettingsDialog(QWidget *parent, SettingsDialog::Tab activeTab)
     showIfNotFoundBox->setChecked(popup->showIfNotFound());
     popupOpacitySpin->setValue(toPercents(popup->windowOpacity()));
     timeoutBeforeHideSpin->setValue(popup->timeoutBeforeHide() / 1000.0);
+    timeoutAfterShowSpin->setValue(popup->timeoutAfterShow() / 1000.0);
     popupDefaultWidthSpin->setValue(popup->defaultSize().width());
     popupDefaultHeightSpin->setValue(popup->defaultSize().height());
     pronounceWordBox->setChecked(popup->pronounceWord());
@@ -237,6 +238,7 @@ void SettingsDialog::accept()
     popup->setModifierKey(modifierKey);
     popup->setWindowOpacity(popupOpacitySpin->value() / 100.0);
     popup->setTimeoutBeforeHide(static_cast<int>(timeoutBeforeHideSpin->value() * 1000.0));
+    popup->setTimeoutAfterShow(static_cast<int>(timeoutAfterShowSpin->value() * 1000.0));
     popup->setDefaultSize(QSize(popupDefaultWidthSpin->value(), popupDefaultHeightSpin->value()));
     popup->setPronounceWord(pronounceWordBox->isChecked());
 
@@ -404,4 +406,3 @@ void SettingsDialog::pluginsItemChanged(QStandardItem *item)
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

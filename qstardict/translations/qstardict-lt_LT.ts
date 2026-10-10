@@ -462,64 +462,64 @@
         <translation>Papildinys</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="349"/>
+        <location filename="../settingsdialog.cpp" line="351"/>
         <source>Information about dictionary &quot;%1&quot;</source>
         <translation>„%1“ – informaciją apie žodyną</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="350"/>
-        <location filename="../settingsdialog.cpp" line="367"/>
+        <location filename="../settingsdialog.cpp" line="352"/>
+        <location filename="../settingsdialog.cpp" line="369"/>
         <source>&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Pavadinimas :&lt;/b&gt; %1 &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="351"/>
+        <location filename="../settingsdialog.cpp" line="353"/>
         <source>&lt;b&gt;Plugin:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Plėtinys :&lt;/b&gt; %1 &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="353"/>
+        <location filename="../settingsdialog.cpp" line="355"/>
         <source>unknown</source>
         <translation>nežinoma</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="354"/>
-        <location filename="../settingsdialog.cpp" line="371"/>
+        <location filename="../settingsdialog.cpp" line="356"/>
+        <location filename="../settingsdialog.cpp" line="373"/>
         <source>&lt;b&gt;Description:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Aprašymas :&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="366"/>
+        <location filename="../settingsdialog.cpp" line="368"/>
         <source>Information about %1 plugin</source>
         <translation>%1 – informacija apie papildinį</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="368"/>
+        <location filename="../settingsdialog.cpp" line="370"/>
         <source>&lt;b&gt;Version:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Versija :&lt;/b&gt; %1 &lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="369"/>
+        <location filename="../settingsdialog.cpp" line="371"/>
         <source>&lt;b&gt;Authors:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Autoriai :&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="369"/>
+        <location filename="../settingsdialog.cpp" line="371"/>
         <source>&lt;br&gt;</source>
         <translation>&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="370"/>
+        <location filename="../settingsdialog.cpp" line="372"/>
         <source>&lt;b&gt;Can search similar words:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Palaikoma panašių žožių paieška:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="370"/>
+        <location filename="../settingsdialog.cpp" line="372"/>
         <source>yes</source>
         <translation>taip</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="370"/>
+        <location filename="../settingsdialog.cpp" line="372"/>
         <source>no</source>
         <translation>ne</translation>
     </message>
@@ -671,132 +671,144 @@
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="413"/>
+        <location filename="../settingsdialog.ui" line="458"/>
         <source>Don&apos;t hide</source>
         <translation>Neslėpti</translation>
     </message>
     <message>
         <location filename="../settingsdialog.ui" line="416"/>
+        <location filename="../settingsdialog.ui" line="461"/>
         <source> sec</source>
         <translation>s</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="451"/>
+        <location filename="../settingsdialog.ui" line="448"/>
+        <source>Timeout before hide after popup shown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="455"/>
+        <source>Hide the popup this many seconds after it is shown. Select &quot;Don&apos;t hide&quot; to keep it open.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settingsdialog.ui" line="493"/>
         <source>Show only if modifier pressed</source>
         <translation>Rodyti tik nuspaudus modifikavimo klavišą</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="462"/>
+        <location filename="../settingsdialog.ui" line="504"/>
         <source>Alt</source>
         <translation>Alt</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="467"/>
+        <location filename="../settingsdialog.ui" line="509"/>
         <source>Control</source>
         <translation>Vald</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="472"/>
+        <location filename="../settingsdialog.ui" line="514"/>
         <source>Shift</source>
         <translation>Lyg2</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="477"/>
+        <location filename="../settingsdialog.ui" line="519"/>
         <source>Win</source>
         <translation>Win</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="487"/>
+        <location filename="../settingsdialog.ui" line="529"/>
         <source>Scan selection</source>
         <translation>Peržvelgti pažymėtus tekstus</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="497"/>
+        <location filename="../settingsdialog.ui" line="539"/>
         <source>Show if word not found</source>
         <translation>Rodyti ir neradus žodžio</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="507"/>
-        <location filename="../settingsdialog.ui" line="700"/>
+        <location filename="../settingsdialog.ui" line="549"/>
+        <location filename="../settingsdialog.ui" line="742"/>
         <source>Appearance</source>
         <translation>Išvaizda</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="527"/>
+        <location filename="../settingsdialog.ui" line="569"/>
         <source>Opacity</source>
         <translation>Dengiamumas</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="534"/>
+        <location filename="../settingsdialog.ui" line="576"/>
         <source>%</source>
         <translation>%</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="563"/>
+        <location filename="../settingsdialog.ui" line="605"/>
         <source>Default width</source>
         <translation>Numatytasis plotis</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="593"/>
+        <location filename="../settingsdialog.ui" line="635"/>
         <source>Default height</source>
         <translation>Numatytasis aukštis</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="632"/>
+        <location filename="../settingsdialog.ui" line="674"/>
         <source>Training</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="640"/>
+        <location filename="../settingsdialog.ui" line="682"/>
         <source>Words per round</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="664"/>
+        <location filename="../settingsdialog.ui" line="706"/>
         <source>Words per day</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="352"/>
+        <location filename="../settingsdialog.cpp" line="354"/>
         <source>&lt;b&gt;Author:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Autorius :&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="353"/>
+        <location filename="../settingsdialog.cpp" line="355"/>
         <source>&lt;b&gt;Words count:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;Žodžių skaičius:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="146"/>
+        <location filename="../settingsdialog.cpp" line="147"/>
         <source>All translation</source>
         <translation>Numatytasis stilius</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="147"/>
+        <location filename="../settingsdialog.cpp" line="148"/>
         <source>Dictionary name</source>
         <translation>Žodyno pavadinimas</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="148"/>
+        <location filename="../settingsdialog.cpp" line="149"/>
         <source>Title</source>
         <translation>Antraštė</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="149"/>
+        <location filename="../settingsdialog.cpp" line="150"/>
         <source>Explanation</source>
         <translation>Apibūdinimas</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="150"/>
+        <location filename="../settingsdialog.cpp" line="151"/>
         <source>Abbreviation</source>
         <translation>Santrumpa</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="151"/>
+        <location filename="../settingsdialog.cpp" line="152"/>
         <source>Example</source>
         <translation>Pavyzdys</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="152"/>
+        <location filename="../settingsdialog.cpp" line="153"/>
         <source>Transcription</source>
         <translation>Transkripcija</translation>
     </message>
@@ -810,12 +822,12 @@
     <name>QStarDict::Trainer</name>
     <message>
         <location filename="../trainer.cpp" line="42"/>
-        <location filename="../trainer.cpp" line="85"/>
+        <location filename="../trainer.cpp" line="86"/>
         <source>QStarDict Training</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../trainer.cpp" line="86"/>
+        <location filename="../trainer.cpp" line="87"/>
         <source>There are no words for training. Please add words for training using the &lt;img width=&quot;24&quot; height=&quot;24&quot; src=&quot;:/pics/word-add.png&quot;&gt; button in translations before training.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -955,7 +967,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../typeinstage.cpp" line="92"/>
+        <location filename="../typeinstage.cpp" line="86"/>
         <source>&lt;p align=&quot;center&quot;&gt;%1&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>

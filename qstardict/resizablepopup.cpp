@@ -23,6 +23,7 @@
 #include <QApplication>
 #include <QCursor>
 #include <QGuiApplication>
+#include <QHideEvent>
 #include <QMouseEvent>
 #include <QScreen>
 #include <QTimerEvent>
@@ -41,7 +42,9 @@ ResizablePopup::ResizablePopup(QWidget *parent)
     m_isMoving = false;
     m_resizeDirection = None;
     m_timeoutBeforeHide = 0;
+    m_timeoutAfterShow = 0;
     m_timerCloseId = 0;
+    m_timerAutoHideId = 0;
     m_timerResizeId = 0;
     m_isPopuped = false;
     setMouseTracking(true);
@@ -53,6 +56,9 @@ ResizablePopup::ResizablePopup(QWidget *parent)
 
 void ResizablePopup::popup()
 {
+    stopCloseTimer();
+    stopAutoHideTimer();
+
     if (m_defaultSize != size())
         resize(m_defaultSize);
 
@@ -75,15 +81,14 @@ void ResizablePopup::popup()
     move(newPosition);
     show();
     m_isPopuped = true;
+    if (m_timeoutAfterShow > 0)
+        m_timerAutoHideId = startTimer(m_timeoutAfterShow);
 }
 
 void ResizablePopup::enterEvent(QEvent*)
 {
     if (m_timerCloseId)
-    {
-        killTimer(m_timerCloseId);
-        m_timerCloseId = 0;
-    }
+        stopCloseTimer();
 }
 
 void ResizablePopup::leaveEvent(QEvent*)
@@ -194,6 +199,14 @@ void ResizablePopup::mouseDoubleClickEvent(QMouseEvent*)
     hide();
 }
 
+void ResizablePopup::hideEvent(QHideEvent *event)
+{
+    stopCloseTimer();
+    stopAutoHideTimer();
+    m_isPopuped = false;
+    QFrame::hideEvent(event);
+}
+
 void ResizablePopup::timerEvent(QTimerEvent *event)
 {
     if (event->timerId() == m_timerResizeId)
@@ -202,11 +215,33 @@ void ResizablePopup::timerEvent(QTimerEvent *event)
     }
     else if (event->timerId() == m_timerCloseId)
     {
-        m_isPopuped = false;
+        stopCloseTimer();
         hide();
+        stopResize();
+    }
+    else if (event->timerId() == m_timerAutoHideId)
+    {
+        stopAutoHideTimer();
+        hide();
+        stopResize();
+    }
+}
+
+void ResizablePopup::stopCloseTimer()
+{
+    if (m_timerCloseId)
+    {
         killTimer(m_timerCloseId);
         m_timerCloseId = 0;
-        stopResize();
+    }
+}
+
+void ResizablePopup::stopAutoHideTimer()
+{
+    if (m_timerAutoHideId)
+    {
+        killTimer(m_timerAutoHideId);
+        m_timerAutoHideId = 0;
     }
 }
 
@@ -291,4 +326,3 @@ bool ResizablePopup::event(QEvent *event)
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

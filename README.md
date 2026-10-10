@@ -18,6 +18,12 @@ QStarDict uses `espeak-ng` by default for word and IPA pronunciation. Both
 speech commands can be changed in the application settings to use another
 text-to-speech program.
 
+## Popup auto-hide
+
+The popup window can close automatically after it is shown. Configure
+**Timeout before hide after popup shown** in the Popup window settings. It is
+disabled by default, and a new popup display restarts the timeout.
+
 ## Wayland popup toggle
 
 Wayland does not allow QStarDict to read the primary selection globally. The

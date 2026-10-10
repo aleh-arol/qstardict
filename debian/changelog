@@ -1,3 +1,9 @@
+qstardict (3.0.0-2+local4) unstable; urgency=medium
+
+  * Add an optional timeout to hide the popup after it is shown.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 12:55:18 +0200
+
 qstardict (3.0.0-2+local3) unstable; urgency=medium
 
   * Use eSpeak NG as the default speech engine.

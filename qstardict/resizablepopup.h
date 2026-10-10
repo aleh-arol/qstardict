@@ -24,6 +24,7 @@
 #include <QFrame>
 
 class QEvent;
+class QHideEvent;
 class QMouseEvent;
 class QTimerEvent;
 
@@ -51,6 +52,12 @@ class ResizablePopup: public QFrame
         { return m_timeoutBeforeHide; }
 
         /**
+         * Return timeout before hiding after the popup is shown.
+         */
+        int timeoutAfterShow() const
+        { return m_timeoutAfterShow; }
+
+        /**
          * Return the default size of a newly shown popup.
          */
         const QSize& defaultSize() const
@@ -62,6 +69,12 @@ class ResizablePopup: public QFrame
          */
         void setTimeoutBeforeHide(int timeoutBeforeHide)
         { m_timeoutBeforeHide = timeoutBeforeHide; }
+
+        /**
+         * Set timeout before hiding after the popup is shown.
+         */
+        void setTimeoutAfterShow(int timeoutAfterShow)
+        { m_timeoutAfterShow = timeoutAfterShow; }
 
         /**
          * Set default size of new-shown popup.
@@ -81,11 +94,14 @@ class ResizablePopup: public QFrame
         void mousePressEvent(QMouseEvent*);
         void mouseReleaseEvent(QMouseEvent*);
         void mouseDoubleClickEvent(QMouseEvent*);
+        void hideEvent(QHideEvent*);
         void timerEvent(QTimerEvent*);
         bool event(QEvent *event);
 
     private:
         void stopResize();
+        void stopCloseTimer();
+        void stopAutoHideTimer();
         void doResize();
             
         enum ResizeDirection
@@ -105,7 +121,9 @@ class ResizablePopup: public QFrame
         QSize m_defaultSize;
         ResizeDirection m_resizeDirection;
         int m_timeoutBeforeHide;
+        int m_timeoutAfterShow;
         int m_timerCloseId;
+        int m_timerAutoHideId;
         int m_timerResizeId;
         bool m_isPopuped;
 };
@@ -115,4 +133,3 @@ class ResizablePopup: public QFrame
 #endif // RESIZABLEPOPUP_H
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

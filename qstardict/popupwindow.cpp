@@ -65,6 +65,7 @@ void PopupWindow::loadSettings()
     setShowIfNotFound(config.value("PopupWindow/showIfNotFound", false).toBool());
     setWindowOpacity(config.value("PopupWindow/opacity", 1.0).toDouble());
     setTimeoutBeforeHide(config.value("PopupWindow/timeoutBeforeHide", 500).toInt());
+    setTimeoutAfterShow(config.value("PopupWindow/timeoutAfterShow", 0).toInt());
     setDefaultSize(config.value("PopupWindow/defaultSize", QSize(320, 240)).toSize());
     setPronounceWord(config.value("PopupWindow/pronounceWord", true).toBool());
     setDefaultStyleSheet(config.value("PopupWindow/defaultStyleSheet", defaultStyleSheet()).toString());
@@ -79,6 +80,7 @@ void PopupWindow::saveSettings()
     config.setValue("PopupWindow/showIfNotFound", m_showIfNotFound);
     config.setValue("PopupWindow/opacity", windowOpacity());
     config.setValue("PopupWindow/timeoutBeforeHide", timeoutBeforeHide());
+    config.setValue("PopupWindow/timeoutAfterShow", timeoutAfterShow());
     config.setValue("PopupWindow/defaultSize", defaultSize());
     config.setValue("PopupWindow/pronounceWord", pronounceWord());
     config.setValue("PopupWindow/defaultStyleSheet", defaultStyleSheet());
@@ -136,4 +138,3 @@ void PopupWindow::showClipboardTranslation()
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-
