@@ -1,3 +1,9 @@
+qstardict (3.0.0-2+local6) unstable; urgency=medium
+
+  * Avoid reloading unchanged dictionary plugins when saving settings.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 14:13:41 +0200
+
 qstardict (3.0.0-2+local5) unstable; urgency=medium
 
   * Add controls to enable or disable all dictionaries.

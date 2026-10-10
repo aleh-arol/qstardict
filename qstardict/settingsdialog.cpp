@@ -171,7 +171,11 @@ void SettingsDialog::accept()
     for (int i = 0; i < rowCount; ++i)
         if (m_pluginsModel->item(i, 0)->checkState() == Qt::Checked)
             loadedPlugins << m_pluginsModel->item(i, 1)->text();
-    dict->setLoadedPlugins(loadedPlugins);
+    QStringList currentPlugins = dict->loadedPlugins();
+    loadedPlugins.sort();
+    currentPlugins.sort();
+    if (loadedPlugins != currentPlugins)
+        dict->setLoadedPlugins(loadedPlugins);
 
     QList<DictCore::Dictionary> loadedDicts;
     rowCount = m_dictsModel->rowCount();
