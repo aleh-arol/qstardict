@@ -41,6 +41,11 @@ bool DBusAdaptor::mainWindowVisible() const
     return m_mainWindow->isVisible();
 }
 
+bool DBusAdaptor::popupVisible() const
+{
+    return Application::instance()->popupWindow()->isVisible();
+}
+
 void DBusAdaptor::setMainWindowVisible(bool visible)
 {
     m_mainWindow->setVisible(visible);
@@ -59,6 +64,15 @@ void DBusAdaptor::showPopup(const QString &text)
 void DBusAdaptor::hidePopup()
 {
     Application::instance()->popupWindow()->hide();
+}
+
+void DBusAdaptor::togglePopup(const QString &text)
+{
+    PopupWindow *popup = Application::instance()->popupWindow();
+    if (popup->isVisible())
+        popup->hide();
+    else
+        popup->showTranslation(text);
 }
 
 QString DBusAdaptor::translate(const QString &text)

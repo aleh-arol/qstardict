@@ -11,3 +11,19 @@ selected words
 * Pronunciation of IPA transcriptions in the translations
 * Plugins support
 * Training for studying words
+
+## Wayland popup toggle
+
+Wayland does not allow QStarDict to read the primary selection globally. The
+packaged desktop launcher starts QStarDict through XWayland. To start it from
+a terminal, use:
+
+```bash
+env QT_QPA_PLATFORM=xcb qstardict
+```
+
+The `qstardict-popup-toggle` helper reads the X11 primary selection with
+`xclip` and sends it to an atomic toggle operation on the session D-Bus
+service. Bind `qstardict-popup-toggle` to a desktop environment global
+shortcut. The first invocation shows a translation; the next hides the visible
+popup.

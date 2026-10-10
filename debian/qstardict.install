@@ -1,2 +1,3 @@
 debian/qstardict.metainfo.xml usr/share/metainfo
 qstardict/qstardict.png usr/share/icons/hicolor/128x128/apps
+qstardict/qstardict-popup-toggle usr/bin

@@ -39,6 +39,10 @@ class DBusAdaptor: public QDBusAbstractAdaptor
      * The main window visible property.
      */
     Q_PROPERTY(int mainWindowVisible READ mainWindowVisible WRITE setMainWindowVisible)
+    /**
+     * The popup window visible property.
+     */
+    Q_PROPERTY(bool popupVisible READ popupVisible)
 
     public:
         /**
@@ -51,6 +55,11 @@ class DBusAdaptor: public QDBusAbstractAdaptor
          * false.
          */
         bool mainWindowVisible() const;
+        /**
+         * Return true if the popup window is visible, otherwise return
+         * false.
+         */
+        bool popupVisible() const;
         /**
          * Set visible state of main window.
          */
@@ -69,6 +78,11 @@ class DBusAdaptor: public QDBusAbstractAdaptor
          * Hide popup window.
          */
         void hidePopup();
+        /**
+         * Show popup window with translation of text, or hide it if it is
+         * visible.
+         */
+        void togglePopup(const QString &text);
         /**
          * Return a translation of text in plain text format.
          */

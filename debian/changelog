@@ -1,6 +1,14 @@
+qstardict (3.0.0-2+local2) unstable; urgency=medium
+
+  * Launch QStarDict through XWayland from the desktop entry.
+  * Add an atomic D-Bus popup toggle operation.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 12:01:55 +0200
+
 qstardict (3.0.0-2+local1) unstable; urgency=medium
 
   * Build a local package based on Ubuntu packaging metadata.
+  * Add a Wayland popup toggle helper.
 
  -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 11:41:19 +0200
 

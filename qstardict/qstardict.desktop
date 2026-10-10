@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Comment=QStarDict is Qt version of StarDict
-Exec=qstardict
+Exec=env QT_QPA_PLATFORM=xcb qstardict
 GenericName=Dictionary
 Icon=qstardict
 Name=QStarDict

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+readonly dbus_service=org.qstardict.dbus
+readonly dbus_path=/qstardict
+readonly dbus_interface=org.qstardict.dbus
+
+selection=$(xclip -out -selection primary)
+dbus-send --session --print-reply --dest="$dbus_service" "$dbus_path" \
+    "$dbus_interface".togglePopup string:"$selection" >/dev/null

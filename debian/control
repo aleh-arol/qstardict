@@ -21,6 +21,8 @@ Architecture: any
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
+ dbus-bin,
+ xclip,
 Suggests:
  espeak,
  espeak-ng,
