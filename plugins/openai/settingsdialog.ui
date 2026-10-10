@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>370</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenAI plugin settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="apiHelpLabel">
+     <property name="text">
+      <string>Configure an already-running OpenAI-compatible API. The default is Gemma 3's local endpoint. The API is checked when you save these settings.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="apiUrlLabel">
+       <property name="text">
+        <string>API base URL:</string>
+       </property>
+       <property name="buddy">
+        <cstring>apiUrlEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="apiUrlEdit">
+       <property name="toolTip">
+        <string>The OpenAI-compatible API base URL, including a path such as /v1. QStarDict does not start or manage this service.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="targetLanguageLabel">
+       <property name="text">
+        <string>Target language:</string>
+       </property>
+       <property name="buddy">
+        <cstring>targetLanguageEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="targetLanguageEdit">
+       <property name="toolTip">
+        <string>The language to translate into. The API model detects the source language.</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="phrasesOnlyBox">
+     <property name="text">
+      <string>Translate phrases only</string>
+     </property>
+     <property name="toolTip">
+      <string>Only translate text containing at least two whitespace-separated words. Disable this to also translate individual words.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="instructionsLabel">
+     <property name="text">
+      <string>Additional translation instructions:</string>
+     </property>
+     <property name="buddy">
+      <cstring>instructionsEdit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="instructionsEdit">
+     <property name="toolTip">
+      <string>Additional instructions sent with each request. QStarDict always requires a structured translation-only response.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>520</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>280</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

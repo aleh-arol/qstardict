@@ -72,10 +72,13 @@ QString DictCore::translate(const QString &word)
         if (! plugin->isTranslatable(i->name(), simplifiedWord))
             continue;
         DictPlugin::Translation translation = plugin->translate(i->name(), simplifiedWord);
+        if (translation.translation().isEmpty())
+            continue;
         result += "<p>\n"
-            "<font class=\"dict_name\">" + translation.dictName() + "</font><br>\n"
-            "<font class=\"title\">" + translation.title() + "</font><br>\n"
-            + translation.translation() + "</p>\n";
+            "<font class=\"dict_name\">" + translation.dictName() + "</font><br>\n";
+        if (! translation.title().isEmpty())
+            result += "<font class=\"title\">" + translation.title() + "</font><br>\n";
+        result += translation.translation() + "</p>\n";
     }
     return result;
 }
@@ -216,6 +219,18 @@ void DictCore::loadSettings()
         QList<Dictionary> dicts;
         for (QStringList::const_iterator i = rawDictsList.begin(); i != rawDictsList.end(); i += 2)
             dicts << Dictionary(*i, *(i + 1));
+        for (QHash<QString, QPluginLoader*>::const_iterator i = m_plugins.begin();
+             i != m_plugins.end(); ++i)
+        {
+            DictPlugin *plugin = qobject_cast<DictPlugin*>((*i)->instance());
+            QStringList defaults = plugin->configuredDefaultDicts();
+            for (QStringList::const_iterator j = defaults.begin(); j != defaults.end(); ++j)
+            {
+                Dictionary dictionary(i.key(), *j);
+                if (! dicts.contains(dictionary))
+                    dicts << dictionary;
+            }
+        }
         setLoadedDicts(dicts);
     }
 }

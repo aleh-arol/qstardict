@@ -17,7 +17,6 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.               #
 #############################################################################
 
-isEmpty(ENABLED_PLUGINS):ENABLED_PLUGINS=stardict web
+isEmpty(ENABLED_PLUGINS):ENABLED_PLUGINS=stardict web openai
 TEMPLATE = subdirs
 SUBDIRS = $$ENABLED_PLUGINS
-

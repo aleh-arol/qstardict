@@ -270,6 +270,20 @@ class DictPlugin
         virtual int execSettingsDialog([[maybe_unused]] QWidget *parent = nullptr)
         { return 0; }
 
+        /**
+         * Return true when dictionaries made available by this plugin's
+         * settings dialog should be enabled after that dialog is accepted.
+         */
+        virtual bool enableAvailableDictsAfterSettings() const
+        { return false; }
+
+        /**
+         * Return dictionaries that should be enabled once when this plugin
+         * has been configured but they have no saved enabled state yet.
+         */
+        virtual QStringList configuredDefaultDicts() const
+        { return QStringList(); }
+
     protected:
         /**
          * Return a directory that contains plugin's data.
@@ -293,4 +307,3 @@ Q_DECLARE_INTERFACE(QStarDict::DictPlugin, "org.qstardict.DictPlugin/1.0")
 #endif // DICTPLUGIN_H
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent
-

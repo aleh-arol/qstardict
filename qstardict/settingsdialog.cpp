@@ -404,6 +404,18 @@ void SettingsDialog::on_pluginsConfigureButton_clicked()
     if (plugin && plugin->execSettingsDialog(this) == QDialog::Accepted)
     {
         dict->reloadDicts();
+        if (plugin->enableAvailableDictsAfterSettings())
+        {
+            QList<DictCore::Dictionary> loadedDicts = dict->loadedDicts();
+            QList<DictCore::Dictionary> availableDicts = dict->availableDicts();
+            for (QList<DictCore::Dictionary>::const_iterator i = availableDicts.begin();
+                 i != availableDicts.end(); ++i)
+            {
+                if (i->plugin() == plugin->name() && ! loadedDicts.contains(*i))
+                    loadedDicts << *i;
+            }
+            dict->setLoadedDicts(loadedDicts);
+        }
         loadDictsList();
     }
 }
