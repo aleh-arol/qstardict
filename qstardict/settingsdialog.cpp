@@ -356,6 +356,23 @@ void SettingsDialog::on_dictsShowInfoButton_clicked()
             tr("<b>Description:</b> %1").arg(info.description()));
 }
 
+void SettingsDialog::on_dictsEnableAllButton_clicked()
+{
+    setAllDictsEnabled(true);
+}
+
+void SettingsDialog::on_dictsDisableAllButton_clicked()
+{
+    setAllDictsEnabled(false);
+}
+
+void SettingsDialog::setAllDictsEnabled(bool enabled)
+{
+    Qt::CheckState state = enabled ? Qt::Checked : Qt::Unchecked;
+    for (int row = 0; row < m_dictsModel->rowCount(); ++row)
+        m_dictsModel->item(row, 0)->setCheckState(state);
+}
+
 void SettingsDialog::on_pluginsShowInfoButton_clicked()
 {
     int currentRow = pluginsTableView->currentIndex().row();

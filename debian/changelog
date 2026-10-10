@@ -1,3 +1,9 @@
+qstardict (3.0.0-2+local5) unstable; urgency=medium
+
+  * Add controls to enable or disable all dictionaries.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 13:44:00 +0200
+
 qstardict (3.0.0-2+local4) unstable; urgency=medium
 
   * Add an optional timeout to hide the popup after it is shown.

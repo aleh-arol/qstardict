@@ -472,12 +472,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+17"/>
+        <location line="+34"/>
         <source>&lt;b&gt;Name:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;სახელი:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
     <message>
-        <location line="-16"/>
+        <location line="-33"/>
         <source>&lt;b&gt;Plugin:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;დამატება:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
@@ -488,7 +488,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+17"/>
+        <location line="+34"/>
         <source>&lt;b&gt;Description:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;აღწერა:&lt;/b&gt; %1</translation>
     </message>
@@ -624,7 +624,27 @@
         <translation>ინფორმაციის ჩვენება</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+11"/>
+        <source>Enable all dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Enable all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Disable all dictionaries</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Disable all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+31"/>
         <source>Plugins</source>
         <translation>დამატებები</translation>
     </message>
@@ -772,7 +792,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../settingsdialog.cpp" line="-18"/>
+        <location filename="../settingsdialog.cpp" line="-35"/>
         <source>&lt;b&gt;Author:&lt;/b&gt; %1&lt;br&gt;</source>
         <translation>&lt;b&gt;ავტორი:&lt;/b&gt; %1&lt;br&gt;</translation>
     </message>
@@ -817,7 +837,7 @@
         <translation>ტრანსკრიფცია</translation>
     </message>
     <message>
-        <location filename="../settingsdialog.ui" line="-651"/>
+        <location filename="../settingsdialog.ui" line="-671"/>
         <source>Use system tray</source>
         <translation>სისტემის კუთხეში</translation>
     </message>

@@ -233,6 +233,26 @@
              </widget>
             </item>
             <item>
+             <widget class="QToolButton" name="dictsEnableAllButton">
+              <property name="toolTip">
+               <string>Enable all dictionaries</string>
+              </property>
+              <property name="text">
+               <string>Enable all</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="dictsDisableAllButton">
+              <property name="toolTip">
+               <string>Disable all dictionaries</string>
+              </property>
+              <property name="text">
+               <string>Disable all</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <spacer>
               <property name="orientation">
                <enum>Qt::Orientation::Horizontal</enum>
@@ -768,6 +788,8 @@
   <tabstop>dictsMoveUpButton</tabstop>
   <tabstop>dictsMoveDownButton</tabstop>
   <tabstop>dictsShowInfoButton</tabstop>
+  <tabstop>dictsEnableAllButton</tabstop>
+  <tabstop>dictsDisableAllButton</tabstop>
   <tabstop>pluginsTableView</tabstop>
   <tabstop>pluginsShowInfoButton</tabstop>
   <tabstop>pluginsConfigureButton</tabstop>

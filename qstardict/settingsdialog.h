@@ -65,6 +65,8 @@ class SettingsDialog: public QDialog, private Ui::SettingsDialog
         void on_dictsMoveUpButton_clicked();
         void on_dictsMoveDownButton_clicked();
         void on_dictsShowInfoButton_clicked();
+        void on_dictsEnableAllButton_clicked();
+        void on_dictsDisableAllButton_clicked();
 
         void on_pluginsShowInfoButton_clicked();
         void on_pluginsConfigureButton_clicked();
@@ -75,6 +77,8 @@ class SettingsDialog: public QDialog, private Ui::SettingsDialog
         void loadPluginsList();
 
     private:
+        void setAllDictsEnabled(bool enabled);
+
         QStringList m_oldPlugins;
         QList<DictCore::Dictionary> m_oldDicts;
         QStandardItemModel *m_dictsModel;
@@ -86,4 +90,3 @@ class SettingsDialog: public QDialog, private Ui::SettingsDialog
 #endif // SETTINGSDIALOG_H
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-
