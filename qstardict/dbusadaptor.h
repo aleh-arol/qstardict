@@ -66,6 +66,10 @@ class DBusAdaptor: public QDBusAbstractAdaptor
          */
         void showPopup(const QString &text);
         /**
+         * Hide popup window.
+         */
+        void hidePopup();
+        /**
          * Return a translation of text in plain text format.
          */
         QString translate(const QString &text);
@@ -83,4 +87,3 @@ class DBusAdaptor: public QDBusAbstractAdaptor
 #endif // DBUSADAPTOR_H
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-
