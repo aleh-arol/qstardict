@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+include /usr/share/dpkg/architecture.mk
+
+%:
+	dh $@ --buildsystem=qmake6
+
+execute_after_dh_auto_install:
+	# upstream ships COPYING file which is a copy of GPL-2 license.
+        # This file is available in /usr/share/common-licenses folder.
+	# Let's remove it to make lintian happy
+	rm -f debian/qstardict/usr/share/doc/qstardict/COPYING

@@ -1,0 +1,59 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2024 f07 <f07@unknown>,
+.\"
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH QSTARDICT 1 "August 12 2024"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+qstardict \- international dictionary written using Qt
+.SH SYNOPSIS
+.B qstardict
+.br
+.SH DESCRIPTION
+QStarDict is a modern international dictionary written using Qt.
+Main features include:
+ * Full support of StarDict dictionaries
+ * Fuzzy search
+ * Support for hyperlinks in translations
+ * Working from the system tray
+ * Scanning mouse selection and showing pop-up windows with translation of
+   selected words
+ * Translations reformatting
+ * Pronouncing of the translated words
+ * Plugins support
+
+Note: qstardict is looking for dictionaries in two folders as default.
+      Those folders are "/usr/share/stardict/dic" and "~/.stardict/dic".
+
+      The first folder is available for all users.
+      The second folder is in the home directory and available for particular user only.
+
+      You have to create one of those folders if it does not exist and put all your dictionary here.
+
+      It is also possible from the configuration dialog to add or remove a folder from lookup by pressing
+      "configure plugin" button beside "stardict" plugin.
+
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+
+.SH OPTIONS
+This program is fully controlled by Qt GUI and doesn't have any options.
+
+.SH SEE ALSO
+
+For more information please visit the homepage: https://github.com/a-rodin/qstardict

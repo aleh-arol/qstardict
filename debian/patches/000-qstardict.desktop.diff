@@ -1,0 +1,17 @@
+#Description: This patch changes 'Categories' value and add 'Keywords' key to comply with new specification requirement.
+#Forwarded: https://github.com/a-rodin/qstardict/issues/1
+#Author: Alexander Fomin <fomin_alex@yahoo.com>
+#---
+
+--- qstardict-2.0.3.orig/qstardict/qstardict.desktop	2024-10-31 06:50:38.000000000 +0000
++++ qstardict-2.0.3/qstardict/qstardict.desktop	2024-11-25 20:40:20.116564254 +0000
+@@ -6,7 +6,8 @@
+ Icon=qstardict
+ Name=QStarDict
+ Type=Application
+-Categories=Qt;Dictionary;Utility;
++Categories=Education;Office;Utility;
++Keywords=dict;dictionary;translate;
+ Name[ru]=QStarDict
+ GenericName[ru]=Словарь
+ Name[tr]=QStarDict

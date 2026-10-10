@@ -1,0 +1,203 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: qstardict
+Upstream-Contact: <rodin.alexander@gmail.com>
+Source: https://notabug.org/a-rodin/qstardict
+
+Files:     *
+Copyright: 2007-2023, Alexander Rodin <alexander@rodin.email>
+           2009-2018, Sergey Ilinykh <rion4ik@gmail.com>
+           2009 Frank Ren
+           2005-2006 Evgeniy <dushistov@mail.ru>
+License:   GPL-2+
+
+Files:     debian/*
+Copyright: 2007-2008, Alexander Rodin <alexander@rodin.email>
+           2018, Boyuan Yang <073plan@gmail.com>
+	   2024 - 2025, Alex Fomin <fomin_alex@yahoo.com>
+License:   GPL-2+
+
+Files:     plugins/dictplugin.h
+           plugins/plugin.pri
+           plugins/plugins.pro
+           plugins/stardict/settingsdialog.cpp
+           plugins/stardict/settingsdialog.h
+           plugins/stardict/stardict.cpp
+           plugins/stardict/stardict.h
+           plugins/stardict/stardict.pro
+           plugins/web/settingsdialog.cpp
+           plugins/web/settingsdialog.h
+           plugins/web/web.cpp
+           plugins/web/web.h
+           plugins/web/web.pro
+           qstardict/application.cpp
+           qstardict/application.h
+           qstardict/cssedit.cpp
+           qstardict/cssedit.h
+           qstardict/dbusadaptor.cpp
+           qstardict/dbusadaptor.h
+           qstardict/dictbrowser.cpp
+           qstardict/dictbrowser.h
+           qstardict/dictbrowsersearch.cpp
+           qstardict/dictbrowsersearch.h
+           qstardict/dictcore.cpp
+           qstardict/dictcore.h
+           qstardict/dictwidget.cpp
+           qstardict/dictwidget.h
+           qstardict/keyboard.cpp
+           qstardict/keyboard.h
+           qstardict/main.cpp
+           qstardict/mainwindow.cpp
+           qstardict/mainwindow.h
+           qstardict/popupwindow.cpp
+           qstardict/popupwindow.h
+           qstardict/resizablepopup.cpp
+           qstardict/resizablepopup.h
+           qstardict/selection.cpp
+           qstardict/selection.h
+           qstardict/settingsdialog.cpp
+           qstardict/settingsdialog.h
+           qstardict/speaker.cpp
+           qstardict/speaker.h
+           qstardict/trayicon.cpp
+           qstardict/trayicon.h
+           qstardict.pri
+           qstardict.pro
+           qstardict/qstardict.pro
+           qstardict/translations/translations.pri
+Copyright: 2004 Stanislav Ievlev
+           2007 Petr Vanek
+           2007-2008 Alexander Rodin
+           2007-2009 Alexander
+           2008 Nick Shaforostoff
+           2008 Nicolas Vion <nico@picapo.net>
+License:   GPL-2+
+
+Files:     plugins/multitran/*
+Copyright: 2008, Nick Shaforostoff
+           2004, Stanislav Ievlev
+License:   GPL-2+
+
+Files:     kdeplasma/applet/dict.cpp
+           kdeplasma/applet/dict.h
+           kdeplasma/dataengine/dictengine.cpp
+           kdeplasma/dataengine/dictengine.h
+Copyright: 2008 Nick Shaforostoff <shaforostoff@kde.ru>
+License:   GPL-2+
+
+Files:     plugins/stardict/dictziplib.*
+Copyright: 2003, Hu Zheng <huzheng_001@163.com>
+           1996, 1997, 1998, 2000, 2002, Rickard E. Faith <faith@dict.org>
+License:   GPL-2+
+
+Files:     plugins/stardict/distance.*
+Copyright: Opera Wang <wangvisual@sohu.com>
+License:   GPL
+
+Files:     plugins/swac/*
+Copyright: 2008, Nicolas Vion <nico@picapo.net>
+License:   GPL-2+
+
+Files:     debian/qstardict.metainfo.xml
+Copyright: 2025,  Alexander Fomin <fomin_alex@yahoo.com>
+License:   FSFAP
+
+Files:     kdeplasma/CMakeLists.txt
+           kdeplasma/COMPILING
+           kdeplasma/applet/CMakeLists.txt
+           kdeplasma/applet/Messages.sh
+           kdeplasma/applet/plasma-qstardict-default.desktop
+           kdeplasma/dataengine/CMakeLists.txt
+           kdeplasma/dataengine/Messages.sh
+           kdeplasma/dataengine/config.h.cmake
+           kdeplasma/dataengine/plasma-dataengine-qstardict.desktop
+           plugins/stardict/file.hpp
+           plugins/stardict/lib.cpp
+           plugins/stardict/lib.h
+           plugins/stardict/mapfile.hpp
+           plugins/stardict/pixmaps/arrow-down.png
+           plugins/stardict/pixmaps/arrow-up.png
+           plugins/stardict/pixmaps/list-add.png
+           plugins/stardict/pixmaps/list-remove.png
+           plugins/stardict/stardict.json
+           plugins/web/pixmaps/edit.png
+           plugins/web/pixmaps/list-add.png
+           plugins/web/pixmaps/list-remove.png
+           plugins/web/web.json
+           qstardict/pixmaps/application-exit.png
+           qstardict/pixmaps/arrow-down.png
+           qstardict/pixmaps/arrow-left.png
+           qstardict/pixmaps/arrow-right.png
+           qstardict/pixmaps/arrow-up.png
+           qstardict/pixmaps/clear-right.png
+           qstardict/pixmaps/configure.png
+           qstardict/pixmaps/dialog-close.png
+           qstardict/pixmaps/dialog-information.png
+           qstardict/pixmaps/dialog-warning.png
+           qstardict/pixmaps/document-print.png
+           qstardict/pixmaps/document-save-as.png
+           qstardict/pixmaps/download.png
+           qstardict/pixmaps/edit-select.png
+           qstardict/pixmaps/go-next.png
+           qstardict/pixmaps/go-previous.png
+           qstardict/pixmaps/help-contents.png
+           qstardict/pixmaps/list-add.png
+           qstardict/pixmaps/list-remove.png
+           qstardict/pixmaps/qstardict-disabled.png
+           qstardict/pixmaps/qstardict.icns
+           qstardict/pixmaps/qstardict.ico
+           qstardict/pixmaps/qstardict.png
+           qstardict/pixmaps/search-filter.png
+           qstardict/pixmaps/speaker.png
+           qstardict/pixmaps/system-search.png
+           qstardict/pixmaps/view-refresh.png
+           qstardict/qstardict.desktop
+           qstardict/qstardict.png
+           qstardict/qstardict.rc
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   public-domain
+Comment:   the files either autogenerated by the build system of have being made in
+           the public domain without any copyright claim.
+
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see <https://www.gnu.org/licenses/>
+Comment:
+ On Debian systems, the complete text of the GNU General Public License
+ Version 2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License: GPL
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, see <https://www.gnu.org/licenses/>
+Comment:
+ On Debian systems, the complete text of the GNU General Public License
+ Version 1 can be found in `/usr/share/common-licenses/GPL-1'.
+
+License: FSFAP
+ Copying and distribution of this file, with or without modification,
+ are permitted in any medium without royalty provided the copyright
+ notice and this notice are preserved.  This file is offered as-is,
+ without any warranty.
+
+License: public-domain
+ No license required for any purpose;
+ the work is not subject to copyright in any jurisdiction.

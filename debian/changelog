@@ -1,0 +1,204 @@
+qstardict (3.0.0-2+local1) unstable; urgency=medium
+
+  * Build a local package based on Ubuntu packaging metadata.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 11:41:19 +0200
+
+qstardict (3.0.0-2) unstable; urgency=medium
+
+  * Comply with new Debian Policy Manual 4.7.2
+  * AppStream metainfo file added
+  * debian/rules file has being changed - removed excessive commented
+    lines. 'rm' of ChangeLog file has being canceled
+
+ -- Alex Fomin <fomin_alex@yahoo.com>  Fri, 09 May 2025 18:21:05 +0300
+
+qstardict (3.0.0-1) unstable; urgency=medium
+
+  * New upstream release, refresh patches
+  * debian/*.docs README rename to README.md
+  * add patches to fix desktop entry file and minor spelling issues
+
+ -- Alex Fomin <fomin_alex@yahoo.com>  Thu, 12 Dec 2024 19:04:47 +0300
+
+qstardict (2.0.3-1) unstable; urgency=medium
+
+  * new upstream release.
+  * updated upstream source location
+  * patched to use Qt6 and remove deprecated items
+
+ -- Alex Fomin <fomin_alex@yahoo.com>  Sun, 08 Dec 2024 09:24:32 +0300
+
+qstardict (2.0.2-1) unstable; urgency=medium
+
+  * adopt the package. Closes: #1065644
+  * new upstream release. Closes: #494701, #611106
+  * patched to use Qt6 and remove deprecated items. Closes: #1078385
+
+ -- Alex Fomin <fomin_alex@yahoo.com>  Fri, 1 Nov 2024 14:30:22 +0300
+
+qstardict (1.4.1-2) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. (See #1065644)
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 07 Mar 2024 19:24:25 -0500
+
+qstardict (1.4.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/copyright: Update upstream contact.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 15 Dec 2023 23:33:39 -0500
+
+qstardict (1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/watch: Monitor new upstream site.
+  * debian/copyright: Update information.
+  * debian/patches: Drop all old patches, merged upstream.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 03 Dec 2023 10:23:58 -0500
+
+qstardict (1.3-8) unstable; urgency=medium
+
+  * debian/clean: Manually clean config.tests/ to avoid FTBFS with twice
+    build in a row followed by clean.
+  * debian/control: Bump Standards-Version to 4.6.2.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 05 Aug 2023 20:38:48 -0400
+
+qstardict (1.3-7) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+  [ Boyuan Yang ]
+  * debian/rules: Use dh13 syntax.
+  * Update standards version to 4.6.1, no changes needed.
+
+ -- Boyuan Yang <byang@debian.org>  Mon, 23 May 2022 16:32:07 -0400
+
+qstardict (1.3-6) unstable; urgency=medium
+
+  * Rebuild against Qt 5.14.
+  * debian/control:
+    + Bump Standards-Version to 4.5.0.
+    + Bump debhelper compat to v13.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 26 Jun 2020 09:33:53 -0400
+
+qstardict (1.3-5) unstable; urgency=medium
+
+  * Rebuild for Debian Buster.
+  * debian/patches: Backport upstream commit till 20181211.
+  * debian/control:
+    + Build-depend on debhelper-compat (= 12) instead of using
+      debian/compat file.
+    + Bump Standards-Version to 4.3.0.
+    + Use "Rules-Requires-Root: no".
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 05 Jan 2019 21:14:56 -0500
+
+qstardict (1.3-4) unstable; urgency=medium
+
+  * Rebuild against gcc 8.2.
+  * debian/copyright: Some minor fixes. Thanks Alexander Rodin for
+    submitting fix on Salsa.
+  * debian/rules: Do not invoke dpkg-architecture manually.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 25 Oct 2018 21:14:00 -0400
+
+qstardict (1.3-3) unstable; urgency=medium
+
+  * Rebuild against gcc 8.
+  * Bump Standards-Version to 4.2.1, no changes needed.
+  * Update my uploader email address and use the @debian.org one.
+
+ -- Boyuan Yang <byang@debian.org>  Sun, 02 Sep 2018 11:31:38 -0400
+
+qstardict (1.3-2) unstable; urgency=medium
+
+  * Backport upstream patches till git trunk.
+  * Bump Standards-Version to 4.1.4 (no changes needed).
+  * d/control: Use canonical Vcs url.
+  * d/rules: Use "dh_missing --fail-missing".
+
+ -- Boyuan Yang <073plan@gmail.com>  Sat, 05 May 2018 21:27:52 +0800
+
+qstardict (1.3-1) unstable; urgency=medium
+
+  * Sponsored upload with original maintainer's approval.
+  * Adopt package, set myself as maintainer as per MIA team's suggestion.
+  * New upstream release. (2018-01-24) Closes: #528257
+    + Ported to Qt5. Closes: #875145
+    + Also backport some patches from upstream.
+  * Switch to 3.0 (quilt) packaging format.
+  * Bump debhelper compat level 5 -> 11.
+    + Use dh sequencer.
+  * Bump Standards-Version 3.8.0 -> 4.1.3.
+  * Drop d/menu and d/qstardict.xpm files in favor of .desktop file.
+  * Point d/watch file to GitHub releases.
+  * Refresh d/qstardict.1 manpage and install it properly.
+  * Rewrite d/copyright with machine-readable format.
+
+ -- Boyuan Yang <073plan@gmail.com>  Wed, 14 Feb 2018 10:06:18 +0800
+
+qstardict (0.12.9-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix "Including individual glib headers no longer supported":
+    apply patch from Michael Biebl to only #include <glib.h>
+    (Closes: #665601)
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 23 Jun 2013 15:48:21 +0200
+
+qstardict (0.12.9-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix FTBFS with binutils-gold (Closes: #556305).
+    Thanks to Mahyuddin Susanto.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 17 May 2011 10:36:12 +0900
+
+qstardict (0.12.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Added libx11-dev to build-depends as qt doesn't depend on it explicitly
+    anymore (Closes: #479889).
+
+ -- Alexander Rodin <rodin.alexander@gmail.com>  Tue, 10 Jun 2008 23:30:18 +0400
+
+qstardict (0.12.7-1.1) unstable; urgency=low
+
+  * Non-maintainer upload of the package I sponsor.
+  * Added zlib1g-dev to build-depends as qt doesn't depend on it explicitly
+    anymore (Closes: #477021).
+  * debian/rules: Added a rule to manually remove a couple of object files
+    that don't get cleaned.
+
+ -- Oleksandr Moskalenko <malex@debian.org>  Mon, 21 Apr 2008 11:36:46 -0600
+
+qstardict (0.12.7-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alexander Rodin <rodin.alexander@gmail.com>  Mon, 31 Mar 2008 09:58:26 +0400
+
+qstardict (0.12-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Alexander Rodin <rodin.alexander@gmail.com>  Fri, 28 Mar 2008 15:30:22 +0300
+
+qstardict (0.08-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Alexander Rodin <rodin.alexander@gmail.com>  Sun, 11 Nov 2007 16:54:39 +0300
+
+Local variables:
+ mode: debian-changelog
+End:

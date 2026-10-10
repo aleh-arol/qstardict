@@ -1,0 +1,8 @@
+Description: Fix spelling in the speech-command tooltip
+Forwarded: not-needed
+---
+--- a/qstardict/settingsdialog.ui
++++ b/qstardict/settingsdialog.ui
+@@ -100 +100 @@
+-               <string>Enter cmd for the speaching program.&lt;br&gt;If cmd contains &quot;%s&quot; it will be replaced to word, else word will be writen to stdin of speech process.</string>
++               <string>Enter cmd for the speech program.&lt;br&gt;If cmd contains &quot;%s&quot; it will be replaced to word, else word will be written to stdin of speech process.</string>

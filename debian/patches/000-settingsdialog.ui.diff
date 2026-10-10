@@ -1,0 +1,16 @@
+#Description: fixing spelling error.
+#Forwarded: https://github.com/a-rodin/qstardict/issues/1
+#Author: Alex Fomin <fomin_alex@yahoo.com>
+#---
+diff -Nru qstardict-3.0.0.orig/plugins/stardict/settingsdialog.ui qstardict-3.0.0/plugins/stardict/settingsdialog.ui
+--- qstardict-3.0.0.orig/plugins/stardict/settingsdialog.ui	2024-12-08 13:05:22.000000000 +0000
++++ qstardict-3.0.0/plugins/stardict/settingsdialog.ui	2024-12-10 21:24:02.174702228 +0000
+@@ -22,7 +22,7 @@
+       <item row="0" column="0" >
+        <widget class="QCheckBox" name="reformatListsBox" >
+         <property name="toolTip" >
+-         <string>If enabled all lists in translation wil be formated using HTML &lt;li> tag (may be slow)</string>
++         <string>If enabled all lists in translation wil be formatted using HTML &lt;li> tag (may be slow)</string>
+         </property>
+         <property name="text" >
+          <string>Reformat lists</string>

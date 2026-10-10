@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2025 Alexander Fomin <fomin_alex@yahoo.com> -->
+<component type="desktop-application">
+  <id>dictionary.international.qstardict</id>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0+</project_license>
+  <name>international dictionary</name>
+  <summary>
+    QStarDict is a modern international dictionary written using Qt
+  </summary>
+
+  <icon type="stock">
+    qstardict.png
+  </icon>
+
+  <description>
+    <p>QStarDict is a modern international dictionary written using Qt.</p>
+    <p>Main features include:</p>
+    <ul>
+      <li> * Full support of StarDict dictionaries</li>
+      <li> * Fuzzy search</li>
+      <li> * Support for hyperlinks in translations</li>
+      <li> * Working from the system tray</li>
+      <li> * Scanning mouse selection and showing pop-up windows with translation of
+             selected words</li>
+      <li> * Translations reformatting</li>
+      <li> * Pronouncing of the translated words</li>
+      <li> * Plugins support</li>
+    </ul>
+  </description>
+
+  <categories>
+    <category>Utility</category>
+    <category>Office</category>
+    <category>Education</category>
+  </categories>
+
+  <keywords>
+    <keyword>dict</keyword>
+    <keyword>dictionary</keyword>
+    <keyword>translate</keyword>
+    <keyword>vocabulary</keyword>
+  </keywords>
+
+  <url type="homepage">https://qstardict.ylsoftware.com</url>
+
+  <launchable type="desktop-id">qstardict.desktop</launchable>
+
+  <releases>
+    <release version="3.0.0" date="2024-12-12">
+      <description>
+        <ul>
+          <li>added support for Qt6</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.3" date="2024-12-08">
+      <description>
+        <ul>
+          <li>added Hebrew translation</li>
+          <li>added Georgian translation</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.2" date="2024-11-01">
+      <description>
+        <ul>
+          <li>fixed build issue</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.1" date="2023-12-15"></release>
+    <release version="1.3.0" date="2018-02-14"></release>
+    <release version="0.12.9" date="2008-06-10"></release>
+    <release version="0.12.7" date="2008-03-31"></release>
+    <release version="0.12" date="2008-03-28"></release>
+    <release version="0.08" date="2007-11-11"></release>
+  </releases>
+
+  <provides>
+    <binary>qstardict</binary>
+  </provides>
+
+  <recommends>
+    <id>espeak-ng</id>
+  </recommends>
+
+</component>

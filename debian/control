@@ -1,0 +1,40 @@
+Source: qstardict
+Section: education
+Priority: optional
+Maintainer: Alex Fomin <fomin_alex@yahoo.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ libglib2.0-dev,
+ libx11-dev,
+ qmake6,
+ qt6-5compat-dev,
+ qt6-base-dev,
+ zlib1g-dev,
+Standards-Version: 4.7.2
+Homepage: https://qstardict.ylsoftware.com
+Vcs-Git: https://salsa.debian.org/debian/qstardict.git
+Vcs-Browser: https://salsa.debian.org/debian/qstardict
+
+Package: qstardict
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Suggests:
+ espeak,
+ espeak-ng,
+ festival,
+Description: International dictionary written using Qt
+ QStarDict is a modern international dictionary written using Qt.
+ .
+ Main features include:
+  * Full support of StarDict dictionaries
+  * Fuzzy search
+  * Support for hyper links in translations
+  * Working from the system tray
+  * Scanning mouse selection and showing pop-up windows with translation of
+    selected words
+  * Translations reformatting
+  * Pronouncing of the translated words
+  * Plugins support

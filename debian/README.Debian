@@ -1,0 +1,10 @@
+qstardict is looking for dictionaries in two folders as default.
+Those folders are "/usr/share/stardict/dic" and "~/.stardict/dic".
+
+The first folder is available for all users.
+The second folder is in the home directory and available for particular users only.
+
+You have to create one of those folders if it does not exist and put all your dictionaries here.
+
+It is also possible from the configuration dialog to add or remove a folder from lookup by pressing
+"configure plugin" button beside "stardict" plugin.
