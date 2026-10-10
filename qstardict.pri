@@ -56,7 +56,6 @@ unix:isEmpty(NO_DBUS):!contains(QT_CONFIG, dbus): NO_DBUS = 1
 unix:isEmpty(NO_DBUS):QT += dbus
 unix:isEmpty(NO_DBUS):DEFINES += QSTARDICT_WITH_DBUS
 isEmpty(NO_TRANSLATIONS):DEFINES += QSTARDICT_WITH_TRANSLATIONS
-include(plugins/plugins.pri)
 
 unix {
     macx {
