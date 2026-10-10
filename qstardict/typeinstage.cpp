@@ -21,6 +21,7 @@
 #include "typeinstage.h"
 
 #include <QKeyEvent>
+#include "application.h"
 #include "ipaspeaker.h"
 
 namespace QStarDict
@@ -30,8 +31,6 @@ TypeInStage::TypeInStage(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
-    m_ipaSpeaker = new IpaSpeaker();
-    m_ipaSpeaker->setSpeechCmd("espeak");
     connect(speakButton, SIGNAL(clicked()), this, SLOT(speak()));
     connect(wordEdit, SIGNAL(returnPressed()), this, SLOT(onEnterPressed()));
     connect(enterButton, SIGNAL(clicked()), this, SLOT(onWordEntered()));
@@ -41,11 +40,6 @@ TypeInStage::TypeInStage(QWidget *parent)
     enterButton->setVisible(true);
     nextWordButton->setVisible(false);
     nextStageButton->setVisible(false);
-}
-
-TypeInStage::~TypeInStage()
-{
-    delete m_ipaSpeaker;
 }
 
 void TypeInStage::setWords(const QVector<WordForTraining> &wordsList)
@@ -60,7 +54,7 @@ void TypeInStage::speak()
     if (m_wordsList.size() == 0)
         return;
 
-    m_ipaSpeaker->speak(m_wordsList[m_currentWordIndex].transcription());;
+    Application::instance()->ipaSpeaker()->speak(m_wordsList[m_currentWordIndex].transcription());
 }
 
 void TypeInStage::onEnterPressed()

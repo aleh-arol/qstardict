@@ -1,3 +1,10 @@
+qstardict (3.0.0-2+local3) unstable; urgency=medium
+
+  * Use eSpeak NG as the default speech engine.
+  * Use the configured IPA speech engine in training.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 12:22:10 +0200
+
 qstardict (3.0.0-2+local2) unstable; urgency=medium
 
   * Launch QStarDict through XWayland from the desktop entry.

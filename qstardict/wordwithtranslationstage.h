@@ -28,8 +28,6 @@
 namespace QStarDict
 {
 
-class IpaSpeaker;
-
 class WordWithTranslationStage: public QWidget, private Ui::WordWithTranslationStage
 {
     Q_OBJECT
@@ -50,7 +48,6 @@ class WordWithTranslationStage: public QWidget, private Ui::WordWithTranslationS
     private:
         QVector<WordForTraining> m_wordsList;
         int m_currentWordIndex;
-        IpaSpeaker *m_ipaSpeaker;
 
         void speak();
         void showCurrentWord();
@@ -59,4 +56,3 @@ class WordWithTranslationStage: public QWidget, private Ui::WordWithTranslationS
 }
 
 #endif // WORDWITHTRANSLATIONSTAGE_H
-

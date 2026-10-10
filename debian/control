@@ -24,7 +24,6 @@ Depends:
  dbus-bin,
  xclip,
 Suggests:
- espeak,
  espeak-ng,
  festival,
 Description: International dictionary written using Qt

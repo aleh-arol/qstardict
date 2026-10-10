@@ -74,9 +74,9 @@ Application::Application(int &argc, char **argv)
     m_popupWindow = new PopupWindow;
     m_popupWindow->setDict(m_dictCore);
     m_speaker = new Speaker;
-    m_speaker->setSpeechCmd(settings.value("Speaker/speechCmd", "espeak").toString());
+    m_speaker->setSpeechCmd(settings.value("Speaker/speechCmd", "espeak-ng").toString());
     m_ipaSpeaker = new IpaSpeaker;
-    m_ipaSpeaker->setSpeechCmd(settings.value("Speaker/espeakCmd", "espeak").toString());
+    m_ipaSpeaker->setSpeechCmd(settings.value("Speaker/espeakCmd", "espeak-ng").toString());
     m_tray = new Tray;
     m_popupShortcut = new QxtGlobalShortcut;
     m_mainWindow = new MainWindow;
@@ -149,4 +149,3 @@ void Application::saveSettingsAndQuit()
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

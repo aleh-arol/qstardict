@@ -20,6 +20,7 @@
 
 #include "wordwithtranslationstage.h"
 
+#include "application.h"
 #include "ipaspeaker.h"
 
 namespace QStarDict
@@ -29,8 +30,6 @@ WordWithTranslationStage::WordWithTranslationStage(QWidget *parent)
     : QWidget(parent)
 {
     setupUi(this);
-    m_ipaSpeaker = new IpaSpeaker();
-    m_ipaSpeaker->setSpeechCmd("espeak");
 
     connect(nextWordButton, SIGNAL(clicked()), SLOT(nextWord()));
     connect(nextStageButton, SIGNAL(clicked()), SLOT(onNextStage()));
@@ -75,7 +74,7 @@ void WordWithTranslationStage::speak()
     if (m_wordsList.size() == 0)
         return;
 
-    m_ipaSpeaker->speak(m_wordsList[m_currentWordIndex].transcription());;
+    Application::instance()->ipaSpeaker()->speak(m_wordsList[m_currentWordIndex].transcription());
 }
 
 void WordWithTranslationStage::showCurrentWord()
@@ -99,4 +98,3 @@ void WordWithTranslationStage::showCurrentWord()
         }
     }
 }
-

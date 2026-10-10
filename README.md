@@ -12,6 +12,12 @@ selected words
 * Plugins support
 * Training for studying words
 
+## Text-to-speech
+
+QStarDict uses `espeak-ng` by default for word and IPA pronunciation. Both
+speech commands can be changed in the application settings to use another
+text-to-speech program.
+
 ## Wayland popup toggle
 
 Wayland does not allow QStarDict to read the primary selection globally. The

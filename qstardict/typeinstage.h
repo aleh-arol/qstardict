@@ -27,15 +27,12 @@
 namespace QStarDict
 {
 
-class IpaSpeaker;
-
 class TypeInStage: public QWidget, private Ui::TypeInStage
 {
     Q_OBJECT
 
     public:
         TypeInStage(QWidget *parent = nullptr);
-        virtual ~TypeInStage();
 
         void setWords(const QVector<WordForTraining> &wordsList);
 
@@ -59,10 +56,8 @@ class TypeInStage: public QWidget, private Ui::TypeInStage
         QVector<WordForTraining> m_wordsList;
         int m_currentWordIndex;
         QVector<WordForTraining> m_wordsWithErrors;
-        IpaSpeaker *m_ipaSpeaker;
 };
 
 }
 
 #endif // TYPEINSTAGE_H
-
