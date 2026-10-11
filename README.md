@@ -1,5 +1,13 @@
 **QStarDict** is a dictionary application for learning languages.
 
+## Debian packaging
+
+For local Debian package builds, this repository adopts the QStarDict packaging
+from Debian. The Debian packaging is copyright 2007-2008 Alexander Rodin,
+2018 Boyuan Yang, and 2024-2025 Alex Fomin, and is licensed under GPL-2.0 or
+later. The complete attribution and licensing information is retained in
+[`debian/copyright`](debian/copyright).
+
 # Main features
 
 * Full support of StarDict 2.x dictionaries
