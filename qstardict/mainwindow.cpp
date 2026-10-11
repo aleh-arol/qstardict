@@ -112,10 +112,11 @@ void MainWindow::loadSettings()
     setDefaultStyleSheet(config.value("MainWindow/defaultStyleSheet", defaultStyleSheet()).toString());
     setShowIpaPronouncers(config.value("MainWindow/showIpaPronouncers", showIpaPronouncers()).toBool());
 
+    bool popupShortcutEnabled = config.value("MainWindow/popupShortcutEnabled", false).toBool();
+    app->popupShortcut()->setEnabled(false);
     app->popupShortcut()->setShortcut(QKeySequence(
         config.value("MainWindow/popupShortcutString", "Shift+Ctrl+Alt+T").toString()));
-    app->popupShortcut()->setEnabled(
-        config.value("MainWindow/popupShortcutEnabled", false).toBool());
+    app->popupShortcut()->setEnabled(popupShortcutEnabled);
 }
 
 void MainWindow::saveSettings()
@@ -279,4 +280,3 @@ void MainWindow::closeEvent(QCloseEvent *event)
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

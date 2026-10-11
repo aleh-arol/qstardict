@@ -401,7 +401,10 @@ void SettingsDialog::on_pluginsConfigureButton_clicked()
         return;
     DictCore *dict = Application::instance()->dictCore();
     DictPlugin *plugin = dict->plugin(m_pluginsModel->item(currentRow, 1)->text());
-    if (plugin && plugin->execSettingsDialog(this) == QDialog::Accepted)
+    if (! plugin)
+        return;
+
+    if (plugin->execSettingsDialog(this) == QDialog::Accepted)
     {
         dict->reloadDicts();
         if (plugin->enableAvailableDictsAfterSettings())

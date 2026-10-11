@@ -52,6 +52,8 @@ class Tray: public QSystemTrayIcon
 
     private:
         void loadSettings();
+
+        bool m_showingSettings;
 };
 
 }
@@ -59,4 +61,3 @@ class Tray: public QSystemTrayIcon
 #endif // TRAY_H
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent
-

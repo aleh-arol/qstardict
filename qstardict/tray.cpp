@@ -32,7 +32,8 @@ namespace QStarDict
 {
 
 Tray::Tray(QObject *parent)
-    : QSystemTrayIcon(parent)
+    : QSystemTrayIcon(parent),
+      m_showingSettings(false)
 {
     QMenu *trayMenu = new QMenu(tr("QStarDict"));
 
@@ -94,8 +95,12 @@ void Tray::on_activated(QSystemTrayIcon::ActivationReason reason)
 
 void Tray::on_actionSettings_triggered()
 {
+    if (m_showingSettings)
+        return;
+    m_showingSettings = true;
     SettingsDialog dialog(Application::instance()->mainWindow());
     dialog.exec();
+    m_showingSettings = false;
 }
 
 void Tray::setScanEnabled(bool enabled)
@@ -120,4 +125,3 @@ void Tray::loadSettings()
 }
 
 // vim: tabstop=4 softtabstop=4 shiftwidth=4 expandtab cindent textwidth=120 formatoptions=tc
-

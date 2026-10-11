@@ -78,17 +78,12 @@ Application::Application(int &argc, char **argv)
     m_ipaSpeaker = new IpaSpeaker;
     m_ipaSpeaker->setSpeechCmd(settings.value("Speaker/espeakCmd", "espeak-ng").toString());
     m_tray = new Tray;
-    m_popupShortcut = new QxtGlobalShortcut;
+    m_popupShortcut = new QxtGlobalShortcut(this);
     m_mainWindow = new MainWindow;
     m_mainWindow->setDict(m_dictCore);
 #ifdef QSTARDICT_WITH_DBUS
     m_dbusAdaptor = new DBusAdaptor(m_mainWindow);
 #endif // QSTARDICT_WITH_DBUS
-
-    m_popupShortcut =
-        new QxtGlobalShortcut(QKeySequence("Ctrl+T"), m_mainWindow);
-    QObject::connect(m_popupShortcut, &QxtGlobalShortcut::activated,
-        Application::instance()->popupWindow(), &PopupWindow::showClipboardTranslation);
 
     m_vocabulary = new Vocabulary();
     m_trainer = new Trainer(m_mainWindow);

@@ -1,42 +1,16 @@
+qstardict (3.0.0-2+local16) unstable; urgency=medium
+
+  * Preserve popup shortcut state during startup.
+  * Prevent multiple configuration dialogs from the tray menu.
+
+ -- Aleh Arol <aleh.arol@gmail.com>  Sat, 11 Oct 2026 11:46:37 +0200
+
 qstardict (3.0.0-2+local13) unstable; urgency=medium
 
-  * Require target-language output from the OpenAI translation prompt.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sat, 11 Oct 2026 11:11:54 +0200
-
-qstardict (3.0.0-2+local12) unstable; urgency=medium
-
-  * Centralize OpenAI provider protocol and rendering constants.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sat, 11 Oct 2026 11:06:44 +0200
-
-qstardict (3.0.0-2+local11) unstable; urgency=medium
-
-  * Improve the OpenAI translation result presentation.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sun, 11 Oct 2026 11:04:01 +0200
-
-qstardict (3.0.0-2+local10) unstable; urgency=medium
-
-  * Label OpenAI translation results with their target language.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sun, 11 Oct 2026 10:55:33 +0200
-
-qstardict (3.0.0-2+local9) unstable; urgency=medium
-
-  * Activate existing configured OpenAI translation providers once.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sun, 11 Oct 2026 00:24:52 +0200
-
-qstardict (3.0.0-2+local8) unstable; urgency=medium
-
-  * Enable the OpenAI translation dictionary after successful configuration.
-
- -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 18:12:55 +0200
-
-qstardict (3.0.0-2+local7) unstable; urgency=medium
-
-  * Add an OpenAI-compatible local phrase translation plugin.
+  * Add an OpenAI-compatible local phrase translation plugin with
+    configurable API, translation, and phrase-matching settings.
+  * Use strict structured output and require target-language translations.
+  * Improve translation result presentation and activation.
 
  -- Aleh Arol <aleh.arol@gmail.com>  Sat, 10 Oct 2026 17:43:12 +0200
 
